@@ -1,0 +1,36 @@
+package stepDefiniton;
+
+import org.junit.runner.RunWith;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import io.cucumber.junit.Cucumber;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import junit.framework.Assert;
+
+@RunWith(Cucumber.class)
+public class Greenkart {
+	WebDriver driver;
+	@Given("^User is on Greenkart Landing page$")
+    public void user_is_on_greenkart_landing_page() throws Throwable {
+        WebDriverManager.chromedriver().setup();
+		driver=new ChromeDriver();
+		driver.get("https://www.rahulshettyacademy.com/seleniumPractise/#/");
+    }
+
+    @When("^User search for \"([^\"]*)\" vegetable$")
+    public void user_search_for_something_vegetable(String strArg1) throws Throwable {
+        
+    	driver.findElement(By.className("search-keyword")).sendKeys(strArg1);
+    }
+
+    @Then("^\"([^\"]*)\" results are displayed$")
+    public void something_results_are_displayed(String strArg1) throws Throwable {
+       driver.findElement(By.cssSelector("h4.product-name")).getText().contains(strArg1);
+    }
+
+}

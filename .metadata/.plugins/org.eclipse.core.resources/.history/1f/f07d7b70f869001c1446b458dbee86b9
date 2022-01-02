@@ -1,0 +1,54 @@
+package stepDefiniton;
+
+import org.junit.runner.RunWith;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import Automation.Ofofo.Base;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import io.cucumber.junit.Cucumber;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import junit.framework.Assert;
+
+@RunWith(Cucumber.class)
+public class Greenkart extends Base{
+	@Given("^User is on Greenkart Landing page$")
+    public void user_is_on_greenkart_landing_page() throws Throwable {
+        
+		driver.get("https://www.rahulshettyacademy.com/seleniumPractise/#/");
+    }
+
+    @When("^User search for \"([^\"]*)\" vegetable$")
+    public void user_search_for_something_vegetable(String strArg1) throws Throwable {
+        
+    	driver.findElement(By.className("search-keyword")).sendKeys(strArg1);
+    }
+
+    @Then("^\"([^\"]*)\" results are displayed$")
+    public void something_results_are_displayed(String strArg1) throws Throwable {
+       driver.findElement(By.cssSelector("h4.product-name")).getText().contains(strArg1);
+    }
+    @Then("^Verify selected \"([^\"]*)\" items are displayed in checkout page$")
+    public void verify_selected_something_items_are_displayed_in_checkout_page(String strArg1) throws Throwable {
+       driver.findElement(By.cssSelector("p.product-name")).getText().contains(strArg1);
+    }
+
+    @And("^Added items to cart$")
+    public void added_items_to_cart() throws Throwable {
+        driver.findElement(By.cssSelector("a.increment")).click();
+        driver.findElement(By.xpath("//button[contains(text(),'ADD TO CART')]")).click();
+    }
+
+    @And("^User proceeded to checkout page for purchase$")
+    public void user_proceeded_to_checkout_page_for_purchase() throws Throwable {
+        driver.findElement(By.xpath("//a[@class='cart-icon']//img[contains(@class,'')]")).click();
+        driver.findElement(By.xpath("//a[@class='cart-icon']//img[contains(@class,'')]")).click();
+        
+        
+    }
+
+}

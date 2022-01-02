@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;StepDefinitions.java&apos; to &apos;Ofofo/src/test/java/stepDefinition&apos;&#x0D;&#x0A;- Original project: &apos;Ofofo&apos;&#x0D;&#x0A;- Destination element: &apos;Ofofo/src/test/java/stepDefinition&apos;&#x0D;&#x0A;- Original element: &apos;Automation.Ofofo.StepDefinitions.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src\/test\/java=/optional=/true=/=/maven.pomderived=/true=/=/test=/true=/&lt;stepDefinition" element1="/src\/test\/java=/optional=/true=/=/maven.pomderived=/true=/=/test=/true=/&lt;Automation.Ofofo{StepDefinitions.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1640717253855" units="1" version="1.0"/>
+</session>

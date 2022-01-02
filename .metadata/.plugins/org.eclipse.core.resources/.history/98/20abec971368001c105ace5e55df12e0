@@ -1,0 +1,34 @@
+package stepDefiniton;
+
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+
+public class FirstTestCase {
+
+	@Given("^user launch firefox browser$")
+    public void user_launch_firefox_browser() throws Throwable {
+        
+    }
+
+    @Given("^when user enter (.+) and (.+)$")
+    public void when_user_enter_and(String xpath, String value) throws Throwable {
+        
+    }
+
+    @Then("^check wheather the otp page is displayed$")
+    public void check_wheather_the_otp_page_is_displayed() throws Throwable {
+        
+    }
+
+    @And("^goes to landing page$")
+    public void goes_to_landing_page() throws Throwable {
+        
+    }
+
+    @And("^click on register$")
+    public void click_on_register() throws Throwable {
+        
+    }
+
+}

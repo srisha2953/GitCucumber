@@ -1,0 +1,27 @@
+package stepDefiniton;
+
+import org.junit.runner.RunWith;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import io.cucumber.junit.Cucumber;
+
+@RunWith(Cucumber.class)
+public class Greenkart {
+	@Given("^User is on Greenkart Landing page$")
+    public void user_is_on_greenkart_landing_page() throws Throwable {
+        
+    }
+
+    @When("^User search for \"([^\"]*)\" vegetable$")
+    public void user_search_for_something_vegetable(String strArg1) throws Throwable {
+        
+    }
+
+    @Then("^\"([^\"]*)\" results are displayed$")
+    public void something_results_are_displayed(String strArg1) throws Throwable {
+        
+    }
+
+}

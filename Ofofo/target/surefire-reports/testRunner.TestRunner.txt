@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: testRunner.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 10.603 s <<< FAILURE! - in testRunner.TestRunner
+ #1(EMPTY_NAME)  Time elapsed: 3.176 s  <<< ERROR!
+io.cucumber.core.runner.AmbiguousStepDefinitionsException: 
+"User search for "Cucumber" vegetable" matches more than one step definition:
+  "^User search for "([^"]*)" vegetable$" in stepDefiniton.Greenkart.user_search_for_something_vegetable(java.lang.String)
+  "^User search for (.+) vegetable$" in stepDefiniton.Greenkart.user_search_for_vegetable(java.lang.String)
+
+ #2(EMPTY_NAME)  Time elapsed: 1.783 s  <<< ERROR!
+io.cucumber.core.runner.AmbiguousStepDefinitionsException: 
+"User search for "Brinjal" vegetable" matches more than one step definition:
+  "^User search for "([^"]*)" vegetable$" in stepDefiniton.Greenkart.user_search_for_something_vegetable(java.lang.String)
+  "^User search for (.+) vegetable$" in stepDefiniton.Greenkart.user_search_for_vegetable(java.lang.String)
+

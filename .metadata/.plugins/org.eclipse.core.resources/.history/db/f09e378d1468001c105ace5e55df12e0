@@ -1,0 +1,20 @@
+Feature: to register as seller
+
+Background:
+    Given user launch firefox browser
+    And goes to landing page
+
+Scenario Outline: scenario description
+	Given when user enter < xpath > and < value>
+		And click on register
+		Then check wheather the otp page is displayed
+		
+		Examples:
+		| xpath | value|
+		|//input[@placeholder='First Name']|John|
+		|//input[@placeholder='Last Name']|Nolan|
+		|//input[@placeholder='Email']|memzwqlpbby@alilot.com|
+		|//input[@type='number']|123456|
+		|//input[@placeholder='Website URL']|https://www.google.com|
+		|//input[@placeholder='Password']|Ofofo@121|
+		|//input[@placeholder='Confirm Password']|Ofofo@121|

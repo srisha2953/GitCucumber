@@ -1,0 +1,12 @@
+package testRunner;
+
+import io.cucumber.junit.CucumberOptions;
+
+
+@CucumberOptions(features = "src/test/java/features",
+				glue="stepDefiniton",
+				tags="@SeleniumTest",
+				monochrome = true)
+public class TestRunner {
+
+}

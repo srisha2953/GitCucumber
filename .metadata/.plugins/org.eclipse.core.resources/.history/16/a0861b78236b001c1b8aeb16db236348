@@ -1,0 +1,6 @@
+Feature: Testing the reports
+
+Scenario: user login to website
+    Given Username "srisha" and password "Srisha@123"
+    When User enter the data and click on login button
+    Then Home page displayed is verified
